@@ -382,7 +382,7 @@ func (tc *testCase) run() {
 			return ctx
 		}).
 		Teardown(func(ctx context.Context, t *testing.T, cfg *envconf.Config) context.Context {
-			client, err := cfg.NewClient()
+			/* client, err := cfg.NewClient()
 			if err != nil {
 				t.Fatal(err)
 			}
@@ -447,7 +447,7 @@ func (tc *testCase) run() {
 				} else {
 					log.Infof("Deleting PVC... %s", tc.pvc.Name)
 				}
-			}
+			} */
 
 			return ctx
 		}).Feature()
